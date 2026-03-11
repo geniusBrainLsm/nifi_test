@@ -106293,7 +106293,62 @@
       "scheduledState" : "ENABLED",
       "statelessFlowTimeout" : "1 min"
     } ],
-    "processors" : [ ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-stateful-analysis-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.8.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "ff9d303d-8131-3ae0-8cb7-41430ac3c7fb",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "AttributeRollingWindow",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -106.79150045080746,
+        "y" : 18.41106126066569
+      },
+      "properties" : { },
+      "propertyDescriptors" : {
+        "Subwindow Length" : {
+          "displayName" : "Subwindow Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Subwindow Length",
+          "sensitive" : false
+        },
+        "Value to Track" : {
+          "displayName" : "Value to Track",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Value to Track",
+          "sensitive" : false
+        },
+        "Time Window" : {
+          "displayName" : "Time Window",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Time Window",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.stateful.analysis.AttributeRollingWindow",
+      "yieldDuration" : "1 sec"
+    } ],
     "remoteProcessGroups" : [ ],
     "scheduledState" : "ENABLED",
     "statelessFlowTimeout" : "1 min"
@@ -106305,6 +106360,6 @@
   "snapshotMetadata" : {
     "author" : "admin",
     "flowIdentifier" : "asdasd",
-    "timestamp" : 1773216352387
+    "timestamp" : 1773216388858
   }
 }
